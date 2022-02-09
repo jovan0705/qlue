@@ -1,0 +1,14 @@
+1. 
+SELECT name, i.price AS total_price FROM persons p
+INNER JOIN transactions t ON p.id = t.person_id
+INNER JOIN items i ON t.item_id = i.id
+GROUP BY p.name;
+
+2. 
+SELECT name, i.name AS total_price FROM persons p
+INNER JOIN transactions t ON p.id = t.person_id
+INNER JOIN items i ON t.item_id = i.id
+WHERE t.date between '2020/01/01' and '2020/06/25'
+GROUP BY p.name;
+
+3. NOT DONE YET
